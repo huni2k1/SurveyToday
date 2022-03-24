@@ -2,9 +2,16 @@ import React from 'react'
 import GoogleLogin from 'react-google-login';
 import { FcGoogle } from 'react-icons/fc';
 import './login.css'
+import { useNavigate } from 'react-router-dom';
+
 export const Login = () => {
+    const navigate = useNavigate();
     const responseGoogle = (response) => {
-        console.log(process.env.REACT_APP_GOOGLE_API_TOKEN)
+        navigate('/homepage', { replace: true });
+        console.log(response)
+        localStorage.setItem("user",response.profileObj.email)
+        localStorage.setItem("userImage",response.profileObj.imageUrl)
+        localStorage.setItem("userName",response.profileObj.name)
     }
     return (
         <div className="container">
