@@ -45,9 +45,13 @@ const LeftColumn = (props) => {
       <li className="list-item">
         <a>Account Setting</a>
       </li>
-      <li className="list-item">
+      <li className="list-item" id="last-item">
         <a>Sign out</a>
       </li>
+      <li className="list-item" id="last-item">
+        <div>SurveyToday 2022</div>
+      </li>
+
     </ul>
   )
 }
