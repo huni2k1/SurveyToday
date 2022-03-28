@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Login from './containers/Login'
 import Home from './containers/Home'

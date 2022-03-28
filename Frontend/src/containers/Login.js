@@ -17,7 +17,7 @@ export const Login = () => {
     return (
         <div className="container">
             <div className='icon'>
-                <img src={logo} alt="Name" width="250" height="250"/>
+                <img id="logo"src={logo} alt="Name" width="250" height="250"/>
             </div>
             <GoogleLogin
                 clientId={process.env.REACT_APP_GOOGLE_API_TOKEN}

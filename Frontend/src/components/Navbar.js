@@ -8,7 +8,7 @@ const Navbar = (props) => {
             <a href="">News</a>
             <a href="">Contact</a>
             <a href="">About</a>
-            <a id="user-ava"><img src={localStorage.getItem("userImage")} alt="User avatar" /></a>
+            <a id="user-ava"><img id="user-img" src={localStorage.getItem("userImage")} alt="User avatar" /></a>
             <p id="user-name">{localStorage.getItem("userName")}</p>
         </div>
     )
