@@ -26,7 +26,11 @@
     margin-bottom:10px;
 }
 .google-button:hover {
+    cursor: pointer;
   }
-#logo{
-
+.icon{
+    display: flex;
+    justify-content: center;
+}
+#logo{  
 }
