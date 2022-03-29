@@ -22,28 +22,28 @@ const LeftColumn = (props) => {
       <li className='logo-container'>
         <img id="logo" src={logo} alt="Name" />
       </li>
-      <li className='list-item'>
+      <li className="first-item">
         <p>{time}, {day}</p>
         <p>Survey Completed:0</p>
         <p>Activating Survey:0</p>
       </li>
       <li className="list-item">
-        <a>Introduction</a>
+        <a href="/homepage">Introduction</a>
       </li>
       <li className="list-item">
-        <a>Create new survey</a>
+        <a href="/homepage/createsurvey">Create new survey</a>
       </li>
       <li className="list-item">
-        <a>Do survey</a>
+        <a href="/homepage/dosurvey">Do survey</a>
       </li>
       <li className="list-item">
-        <a>Your past surveys</a>
+        <a href="/homepage/pastsurveys">Your past surveys</a>
       </li>
       <li className="list-item">
-        <a>Tutorial</a>
+        <a href="/homepage/tutorial">Tutorial</a>
       </li>
       <li className="list-item">
-        <a>Account Setting</a>
+        <a href="/homepage/account">Account Setting</a>
       </li>
       <li className="list-item" id="last-item">
         <a>Sign out</a>

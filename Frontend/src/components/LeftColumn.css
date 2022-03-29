@@ -1,3 +1,11 @@
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+a{
+    display: block;
+    cursor: pointer;
+}
 .menu-list{
     list-style-type: none;
     font-weight: 400;
@@ -15,7 +23,6 @@
 }
 .list-item:hover{
     background-color: #444;
-    cursor: pointer;
     color: #bae0ff;
     text-shadow: 0 0 5px #0a1014;
 }
@@ -29,4 +36,7 @@
     transform: scale(0.9,0.7);
     width:130px;
     height:130px;
+}
+.first-item{
+    padding:10px 10px 10px 15px;
 }
