@@ -1,1 +1,103 @@
+<<<<<<< HEAD
 abc
+=======
+Requirements Document
+Survey Today - Group 8         
+
+Project members: Mason Glenn, Ninh Van, David Crews, Gracey Cobb
+
+Goals:
+We will create a system that allows registered users the ability to create surveys. A system will have a login feature that enables users to sign in with their Google account.Survey questions should be of different types and could possibly incorporate images. The survey creator should be able to review data in numeric and visual representations as well as download the data. Registered and unregistered users should be able to complete survey questions.
+ For our minimum viable product, (MVP), the system that allows users to log in. The homepage will enable users to create new surveys and do surveys. This version of the project will include basic data visualization in the form of a standard bar graph representing the number of users who choose a specific answer. Version 1 will include the option to ask multiple choice questions, yes/no questions (True/False), and the ability to choose how much the participant agrees with a certain statement: Strongly disagree, disagree, somewhat disagree, etc. 
+
+Basic tech stack:
+Frontend : React
+Backend : ExpressJS(NodeJS)
+Database: MySQL
+
+
+User Types: 
+Survey Creator: Sally Sosa
+Survey Completer: Jordan Whittington
+User Personas:
+Sally Sosa is a 32 year-old journalist who uses lots of surveys to gather data.  She wants to be able to easily collect data without having to go out in the streets. She needs an easy way of creating surveys and getting them out to people.
+Jordan Whittington is a 21 year-old college student who wants to fill out surveys for fun and for class.  One of his professors likes to create surveys to send to the class and Jordan thinks the website that the professor currently uses is not very good.  Jordan also fills out internet surveys for fun to help people with their research and wants them all to be in one easy-to-access place.
+
+User Stories:
+As a survey creator, I want to be able to see data visualizations from surveys I’ve created.
+As a survey completer, I want to be able to see all of the surveys that I’ve completed in one place.
+As a survey creator, I want to use multiple kinds of questions, such as multiple choice, true/false.
+As a survey creator, I want to be able to see all the surveys that I created and their results in some place.
+As a survey completer, I want to be able to search for surveys.
+As a survey creator, I want to be able to put pictures in my survey questions.
+As a survey completer, I want my survey answers to be anonymous.
+As a survey creator, I want to be able to export my data from my created surveys.
+
+Features:
+User account system
+Creating survey
+Displaying answer information
+Displaying completed survey and created survey
+Invite other people to do a survey via a link
+Data presentation of survey’s answer
+
+Features descriptions:
+User account system : Integrated Google Login API, users can log in to the website via gmail.
+Creating survey: Users of SurveyToday can create surveys of multiple choice questions. Each question can have up to ten answers. 
+Displaying answer information: For each survey, the user creating that survey will be able to see the answer of that survey.
+Displaying completed surveys and created surveys: Users will be able to see surveys that they completed as well as surveys that they created. Information such as time created and time completed could be also displayed.
+Invite other people to do a survey via a link: Users can send a survey completion invitation to others via gmail using Gmail API.
+
+
+
+
+
+Sitemap:
+
+
+Page Description: 
+Login page: A basic login page with a logo of the survey today, a button to sign in with google , there should be no input for account and password.
+Home page: A homepage will include a navbar that has the logo of the survey today and the name , avatar of the user. There would be some information to display such as the date or survey invitation.
+Create survey page: A page that could be used for the user to create different kinds of questions, and add questions to the survey.
+Do survey page: A page that could enable the user to do the survey and submit.
+Display past survey page: A page that displays surveys that the user has done or has created.
+Past survey’s information page: A page displaying detailed information about a created or completed survey of a user. For completed surveys, the page will display statistics such as the number of people who completed that survey and the number of people choosing each specific answer. For each question there could be a tab to show some graph to represent statistical data.  
+Account page: Displaying information of the users. Possible information could be gmail, avatar, date of birth, date registered, survey completed, survey created.
+
+
+Database Description: 
+
+This is our initial database structure. As the project progresses, we may see the need to add entities or attributes to individual entities.
+User(UserID, UserGmail, User_FName, User_LName, User_DOB), Survey( SurveyID, CreatorID, SurveyName , DateCreated, DateExpired) , SurveyQuestion( QuestionID, SurveyID, Question), SurveyQuestionAnswer( AnswerID, QuestionID, Answer, AnswerLetter, AnswerCount)
+
+
+Non-Functional Requirements:
+
+The application must work in all modern browsers
+The user experience should look nice
+The application must work well and look appropriate on all screen sizes.
+The application must be able to support at least 100 users simultaneously (this number may vary depending on data on the student body and user count).
+Security and privacy softwares must be implemented; Everything must be run in the browser due to security vulnerabilities (no server). 
+Risks: 
+The primary risk would be competition from existing survey creation websites.
+Factor of users being anonymous being obscured.
+Risk of group members being unavailable due to being uncooperative/ unavailable and not upholding their responsibilities to the project and the group as a whole.
+
+Future Iterations: 
+Version 2: For version 2, we would add a profile screen that includes the ability for users to view the surveys they have created as well as the ones they have participated in. This data will not be available for guest users. On the first login of a newly registered user, the homepage will now include an example survey that shows the user how to answer questions in a variety of formats as well as how to create questions in that variety. Version 2 will also include more customization in regards to the data visualization (i.e. different colors, different ways to represent data). Another thing we would like to add is better styling overall to the website using CSS. This would involve deciding on a central color scheme as well as a visually appealing page layout. Two more additions we would like to make to version 2 would be to have a keyword search that would take registered and unregistered users to surveys that matched the keywords as well as a Survey ID that survey creators could share with others to take them directly to that specific survey. Overall, version 2 of the SurveyToday app would be a more refined, better looking, and more functional version of the original system.
+
+Version 3: Version 3 will see a large increase in functionality and integration with other services. We  would like version 3 to have complex data visualization across not just one survey but across a user’s entire inventory of surveys they have created. Version 3 would also have the ability to export the survey data in a variety of formats including csv, JSON, and others. One major addition in version 3 that we think would be valuable would be integration with Google Maps, and other Google services that are available to add destinations, songs, videos, etc. as options to select as survey answers. Finally, in version 3, we would like to add the ability to create a sharable link to a survey that users could send once they created the survey.
+
+
+
+
+
+
+
+
+
+
+
+
+                                
+>>>>>>> 58afa083d9081cf42a828c3a3c80677a334c49d8

@@ -1,0 +1,42 @@
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+a{
+    display: block;
+    cursor: pointer;
+}
+.menu-list{
+    list-style-type: none;
+    font-weight: 400;
+    width:260px;
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:20px;
+    padding-bottom:19px;
+    margin:0px;
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+}
+.list-item{
+    padding:10px 10px 10px 15px;
+}
+.list-item:hover{
+    background-color: #444;
+    color: #bae0ff;
+    text-shadow: 0 0 5px #0a1014;
+}
+.list-item:focus{
+    color: #7fc9ff;
+}
+.logo-container{
+    text-align: center;
+}
+#logo{
+    transform: scale(0.9,0.7);
+    width:130px;
+    height:130px;
+}
+.first-item{
+    padding:10px 10px 10px 15px;
+}
