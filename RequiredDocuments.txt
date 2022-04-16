@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+abc
+=======
 Requirements Document
 Survey Today - Group 8         
 
@@ -97,3 +100,4 @@ Version 3: Version 3 will see a large increase in functionality and integration 
 
 
                                 
+>>>>>>> 58afa083d9081cf42a828c3a3c80677a334c49d8
