@@ -8,6 +8,7 @@ import CreateSurveyPage from './CreateSurveyPage'
 import DoSurveyPage from './DoSurveyPage'
 import PastSurveyPage from './PastSurveyPage'
 import Tutorial from './Tutorial'
+import DoSurveyPageID from './DoSurveyPageID'
 const Home = () => {
   return (
 
@@ -19,6 +20,7 @@ const Home = () => {
           <Route path="/" element={<IntroductionPage />} />
           <Route path="/createsurvey" element={<CreateSurveyPage />} />
           <Route path="/dosurvey" element={<DoSurveyPage />} />
+          <Route path="/dosurvey/:id" element={<DoSurveyPageID />} />
           <Route path="/pastsurveys" element={<PastSurveyPage />} />
           <Route path="/tutorial" element={<Tutorial />} />
         </Routes>

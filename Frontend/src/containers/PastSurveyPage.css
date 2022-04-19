@@ -1,0 +1,19 @@
+.pastSurveysContainer{
+    display: flex;
+    width:100%;
+}
+.column1{
+    text-align: center;
+    width:35%;
+    margin-top:50px;
+    margin-left:100px;
+    border:1px solid black;
+    padding:20px;
+}
+.column2{
+    text-align: center;
+    width:35%;
+    margin-top:50px;
+    border:1px solid black;
+    padding:20px;
+}

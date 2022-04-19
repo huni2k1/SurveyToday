@@ -3,12 +3,6 @@ import * as Survey from "survey-core";
 import * as SurveyReact from "survey-react-ui";
 import * as SurveyCreatorCore from "survey-creator-core";
 import * as SurveyCreator from "survey-creator-react";
-//Import Survey localization
-import "survey-core/survey.i18n.js";
-//Import Survey Creator localization
-import "survey-creator-core/survey-creator-core.i18n.js";
-
-//Import Survey and Creator styles
 import "survey-core/defaultV2.css";
 import "survey-creator-core/survey-creator-core.css";
 
@@ -20,21 +14,40 @@ export class CreateSurveyPage extends Component {
             { type: "text", name: "customerName", title: "What is your name?", isRequired: true }
         ]
     };
+    Survey
+    .Serializer
+    .removeProperty("panelbase", "visibleIf");
+     Survey
+    .Serializer
+    .removeProperty("question", "visibleIf");
+    Survey.Serializer
+    .removeProperty("panellogic", "visibleIf");
     var options = {
-      showLogicTab: true,
-      haveCommercialLicense: true //Add this line
+      haveCommercialLicense: true, //Add this line
+      questionTypes: ["text", "checkbox", "radiogroup"],
+      showJSONEditorTab: false,
+      pageEditMode: "single",
   };
+
     this.creator = new SurveyCreator.SurveyCreator(options);
     this.creator.saveSurveyFunc = this.saveMySurvey;
+    this.creator
+    .onShowingProperty
+    .add(function (sender, options) {
+        if (options.obj.getType() == "survey") {
+            options.canShow = options.property.name == "title";
+        }
+    });
     this.creator.JSON = json;
+
   }
   render() {
-    return (<div>
-      <SurveyCreator.SurveyCreatorComponent creator={this.creator} />
-    </div>);
+    return (
+      <SurveyCreator.SurveyCreatorComponent creator={this.creator} />);
   }
   saveMySurvey = () => {
     console.log(JSON.stringify(this.creator.text));
+    
   };
 }
 

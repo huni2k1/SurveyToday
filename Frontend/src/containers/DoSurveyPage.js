@@ -1,31 +1,48 @@
 import React, { Component } from "react";
 import * as Survey from "survey-core";
 import * as SurveyReact from "survey-react-ui";
-//Import localization
 import "survey-core/survey.i18n.js";
-//Import Survey styles
 import "survey-core/defaultV2.css";
+import "./DoSurveyPage.css";
+import { useNavigate } from 'react-router-dom';
 
 export class DoSurveyPage extends Component {
     constructor() {
         super();
-        const json = {
-            elements: [
-                { type: "text", name: "customerName", title: "What is your name?", isRequired: true }
-            ]
-        };
-        this.survey = new Survey.Model(json);
+        this.survey = new Survey.Model();
         this.survey.onValueChanged.add((sender, options) => {
-        console.log("value changed!");
+            console.log("value changed!");
         });
         this.survey.onComplete.add((sender, options) => {
-        console.log("Complete! Response:" +  JSON.stringify(sender.data));
+            console.log("Complete! Response:" + JSON.stringify(sender.data));
         });
+        this.state = { value: '' };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({ value: event.target.value });
+    }
+
+    handleSubmit(event) {
+        const {navigation} = this.props;
+        navigation('/homepage/dosurvey/'+this.state.value);
+
     }
     render() {
-        return <SurveyReact.Survey model={this.survey} />;
+        return <form>
+            <label>
+                Input the SurveyID:
+                <input type="text" value={this.state.value} onChange={this.handleChange} name="name" />
+            </label>
+            <button type="button" onClick={this.handleSubmit}>Submit</button>
+        </form>;
     }
 
-} 
+}
 
-export default DoSurveyPage
+export default function(props){
+    const navigation = useNavigate();
+    return <DoSurveyPage navigation={navigation} />;
+}
