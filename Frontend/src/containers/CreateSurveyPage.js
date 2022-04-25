@@ -5,7 +5,8 @@ import * as SurveyCreatorCore from "survey-creator-core";
 import * as SurveyCreator from "survey-creator-react";
 import "survey-core/defaultV2.css";
 import "survey-creator-core/survey-creator-core.css";
-
+import { getDatabase, ref, onValue,set} from "firebase/database";
+import { useNavigate } from "react-router-dom";
 export class CreateSurveyPage extends Component {
   constructor() {
     super();
@@ -39,15 +40,28 @@ export class CreateSurveyPage extends Component {
         }
     });
     this.creator.JSON = json;
-
+    const db = getDatabase();
+    const x=ref(db, 'createdSurvey');
+    onValue(x, (snapshot) => {
+    const data = snapshot.val();
+    if(data)
+      this.id=Object.keys(data).length+1;
+    else
+      this.id=1;
+    });
   }
   render() {
     return (
       <SurveyCreator.SurveyCreatorComponent creator={this.creator} />);
   }
   saveMySurvey = () => {
-    console.log(JSON.stringify(this.creator.text));
-    
+    console.log(this.creator.text);
+    const db = getDatabase();
+    set(ref(db, 'createdSurvey/' + this.id), {
+      content:this.creator.text,
+      user:localStorage.getItem('user'),
+    });
+    window.location.href = 'http://localhost:3000/homepage/pastsurveys';
   };
 }
 

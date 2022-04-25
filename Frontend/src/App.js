@@ -11,8 +11,8 @@ function App() {
   
   useEffect(() => {
     const User = localStorage.getItem('user')
-    // if (!User) navigate('/login');
-    // else navigate('/homepage')
+    if (!User) navigate('/login');
+    else navigate('/homepage')
   }, []);
   return (
     <Routes>

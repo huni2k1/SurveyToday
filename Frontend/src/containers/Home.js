@@ -9,9 +9,12 @@ import DoSurveyPage from './DoSurveyPage'
 import PastSurveyPage from './PastSurveyPage'
 import Tutorial from './Tutorial'
 import DoSurveyPageID from './DoSurveyPageID'
+import ModifySurveyPage from './ModifySurveyPage'
+import ResultSurveyPage from './ResultSurveyPage'
+import CompletionSurveyPage from './CompletionSurveyPage'
 const Home = () => {
-  return (
 
+  return (
     <div id="container">
       <Navbar></Navbar>
       <div id="wrapper">
@@ -23,6 +26,9 @@ const Home = () => {
           <Route path="/dosurvey/:id" element={<DoSurveyPageID />} />
           <Route path="/pastsurveys" element={<PastSurveyPage />} />
           <Route path="/tutorial" element={<Tutorial />} />
+          <Route path="/modify/:id" element={<ModifySurveyPage />} />
+          <Route path="/result/:id" element={<ResultSurveyPage />} />
+          <Route path="/result/:id1/:id2" element={<CompletionSurveyPage />} />
         </Routes>
       </div>
     </div>

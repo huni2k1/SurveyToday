@@ -14,6 +14,9 @@ export const Login = () => {
         localStorage.setItem("userImage",response.profileObj.imageUrl)
         localStorage.setItem("userName",response.profileObj.name)
     }
+    const failresponseGoogle = (response) => {
+        console.log("Login Failed");
+    }
     return (
         <div className="container">
             <div className='icon'>
@@ -33,7 +36,7 @@ export const Login = () => {
                     </button>
                 )}
                 onSuccess={responseGoogle}
-                onFailure={responseGoogle}
+                onFailure={failresponseGoogle}
                 cookiePolicy="single_host_origin"
             />
         </div>
