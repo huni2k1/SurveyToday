@@ -61,7 +61,7 @@ export class CreateSurveyPage extends Component {
       content:this.creator.text,
       user:localStorage.getItem('user'),
     });
-    window.location.href = 'http://localhost:3000/homepage/pastsurveys';
+    window.location.href = 'https://surveytoday2.web.app/homepage/pastsurveys';
   };
 }
 

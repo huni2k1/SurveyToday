@@ -9,13 +9,12 @@ export const Login = () => {
     const navigate = useNavigate();
     const responseGoogle = (response) => {
         navigate('/homepage', { replace: true });
-        console.log(response)
         localStorage.setItem("user",response.profileObj.email)
         localStorage.setItem("userImage",response.profileObj.imageUrl)
         localStorage.setItem("userName",response.profileObj.name)
     }
     const failresponseGoogle = (response) => {
-        console.log("Login Failed");
+        console.log(response);
     }
     return (
         <div className="container">
@@ -36,7 +35,7 @@ export const Login = () => {
                     </button>
                 )}
                 onSuccess={responseGoogle}
-                onFailure={responseGoogle}
+                onFailure={failresponseGoogle}
                 cookiePolicy="single_host_origin"
             />
         </div>
