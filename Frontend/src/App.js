@@ -9,11 +9,7 @@ import PastSurveyPage from './containers/PastSurveyPage';
 function App() {
   const navigate = useNavigate();
   
-  useEffect(() => {
-    const User = localStorage.getItem('user')
-    if (!User) navigate('/login');
-    else navigate('/homepage')
-  }, []);
+
   return (
     <Routes>
     <Route path="/login" element={<Login />}/>

@@ -36,7 +36,7 @@ export const Login = () => {
                     </button>
                 )}
                 onSuccess={responseGoogle}
-                onFailure={failresponseGoogle}
+                onFailure={responseGoogle}
                 cookiePolicy="single_host_origin"
             />
         </div>

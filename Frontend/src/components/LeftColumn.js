@@ -49,6 +49,8 @@ const LeftColumn = (props) => {
   })
   const handleLogout= ()=>{
     localStorage.removeItem("user");
+    localStorage.removeItem("userImage");
+    localStorage.removeItem("userName");
   }
   return (
     <ul className="menu-list">

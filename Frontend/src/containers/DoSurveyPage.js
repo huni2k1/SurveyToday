@@ -31,7 +31,7 @@ export class DoSurveyPage extends Component {
 
     }
     render() {
-        return <form>
+        return <form className="dosurveyform">
             <label>
                 Input the SurveyID:
                 <input type="text" value={this.state.value} onChange={this.handleChange} name="name" />
