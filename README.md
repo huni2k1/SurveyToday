@@ -43,7 +43,7 @@ Advanced Question Options: Clicking the settings button in the question options 
 
 Survey Preview: The “Preview” button at the top of the create survey page allows survey creators to view their survey as a user who is taking the survey. In the preview screen, survey creators can also answer survey questions as if they were a survey completer.
 
- ![image](https://user-images.githubusercontent.com/63893969/165843319-6e9bad61-936c-4491-9494-e662c4b83777.png)
+![image](https://user-images.githubusercontent.com/63893969/165843319-6e9bad61-936c-4491-9494-e662c4b83777.png)
 
 
 Requirements and Instructions for Doing a Survey
@@ -51,7 +51,7 @@ Requirements and Instructions for Doing a Survey
 Another user type offered in the application is the Survey Taker. As a survey taker, the user can take pre-created surveys using the given survey ID corresponding to that particular survey. The taker can then go and see what surveys they have completed in the past survey tab.
 Do Survey Buttons: The user can navigate to the Do Survey page either by clicking the "Fill out a survey" button on the Home page or by selecting the "Do survey" button on the left column. Once clicking one of these buttons, the user will be directed to the Do survey page.
 
- ![image](https://user-images.githubusercontent.com/63893969/165843366-4c983490-9455-4892-9858-77725b1e404a.png)
+![image](https://user-images.githubusercontent.com/63893969/165843366-4c983490-9455-4892-9858-77725b1e404a.png)
 
 
 Survey ID Search: The “Input the SurveyID” text box allows the user to input the surveyID of an already created survey. This ID will be an integer value. If a friend or colleague creates a survey, they can give you their survey ID for the user to fill it out. The user will then click the “Submit” button to be directed to the desired survey.
