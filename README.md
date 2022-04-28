@@ -21,6 +21,7 @@ Requirements and Instructions for Creating a Survey
 One user type offered in the application is the Survey Creator. As a survey creator, the user can create surveys with various question types and restrictions to then be able to export using the Survey ID so that other users can take their survey. The creator will then be able to go back and look at the responses of their survey. 
 
 Survey Create buttons: As a survey creator, the user will be able to create a survey through the “Create Survey” button. This button is found on the Home page and also on the left side bar. Once clicking on this button, the user will be directed to a Survey designer creation field.
+
 ![image](https://user-images.githubusercontent.com/63893969/165842818-2af51415-42b7-4a57-b47b-3da05379cea6.png)
 
 Basic Survey Fields: The survey's primary fields allow the user to add a title, a description, and a logo to the survey. The role of these fields is to help personalize the survey and give users an idea of what the survey is about. For the logo, the user can upload a photo file from their computer.
